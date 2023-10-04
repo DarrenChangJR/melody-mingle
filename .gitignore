@@ -49,3 +49,4 @@ tmp_email/
 .direnv
 .envrc
 .tool-versions
+db.sqlite3
