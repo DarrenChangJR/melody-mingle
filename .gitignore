@@ -50,3 +50,5 @@ tmp_email/
 .envrc
 .tool-versions
 db.sqlite3
+frontend/static/frontend/main.js
+frontend/static/frontend/main.js.LICENSE.txt
