@@ -38,12 +38,11 @@ class SaveRoomView(APIView):
         serializer = SaveRoomSerializer(data=request.data)
         if serializer.is_valid():
             guest_can_pause = serializer.data['guest_can_pause']
-            votes_to_skip = serializer.data['votes_to_skip']
             host = request.session.session_key
             
             room, created = Room.objects.update_or_create(
                 host=host,
-                defaults=dict(guest_can_pause=guest_can_pause, votes_to_skip=votes_to_skip)
+                defaults=dict(guest_can_pause=guest_can_pause)
             )
             request.session['room_code'] = room.code
             return Response(RoomSerializer(room).data, status=(status.HTTP_201_CREATED if created else status.HTTP_202_ACCEPTED))
