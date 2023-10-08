@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { Button, ButtonGroup, Grid, Typography } from "@material-ui/core";
+import { Button, ButtonGroup, Grid, Typography } from "@mui/material";
 
 export default function HomePage() {
     const navigate = useNavigate();
